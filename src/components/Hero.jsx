@@ -81,9 +81,9 @@ export default function Hero() {
   {/* BMI Section */}
   <div
     id="bmi-section"
-    className="flex flex-col items-center p-10 "
+    className="flex flex-col items-center p-10 pl-0 "
   >
-    <div className="flex flex-col items-center bg-black w-[20000px] h-40 ">
+    <div className="flex flex-col items-center bg-black w-[100%] h-40 ">
       <h2 className="text-lg font-medium uppercase text-blue-300 pt-4 mb-4 tracking-wide">
         Guided Plan for a Healthy Lifestyle
       </h2>
@@ -295,7 +295,7 @@ export default function Hero() {
         
       </div>
       <p className="text-lg text-left font-medium mt-4 text-[#60A5FA] ">Activity</p>
-      <h3 className="text-xl text-left font-bold mt-2">Marching in Place</h3>
+      <h3 className="text-xl text-left font-bold mt-2">Warmup</h3>
       <ul className="list-none text-left p-0 mt-2">
         <li className="text-lg font-medium mb-2">Chair Marching: Sit on a sturdy chair and march your legs up and down.</li>
         <li className="text-lg font-medium mb-2">Step Touch: Step side-to-side, gently tapping your feet.</li>
@@ -313,7 +313,7 @@ export default function Hero() {
         
       </div>
       <p className="text-lg text-left font-medium mt-4 text-[#60A5FA] ">Activity</p>
-      <h3 className="text-xl text-left font-bold mt-2">Marching in Place</h3>
+      <h3 className="text-xl text-left font-bold mt-2">Strength</h3>
       <ul className="list-none text-left p-0 mt-2">
       <li className="text-lg font-medium mb-2">Wall Push-Ups: Stand facing a wall, place your palms on it, and bend your elbows to bring your chest closer to the wall.</li>
         <li className="text-lg font-medium mb-2">Seated Leg Lifts: Sit on a chair, extend one leg straight, hold, then lower it. Alternate legs.</li>
@@ -332,7 +332,7 @@ export default function Hero() {
         
       </div>
       <p className="text-lg text-left font-medium mt-4 text-[#60A5FA] ">Activity</p>
-      <h3 className="text-xl text-left font-bold mt-2">Marching in Place</h3>
+      <h3 className="text-xl text-left font-bold mt-2">Rest</h3>
       <ul className="list-none text-left p-0 mt-2">
         <li className="text-lg font-medium mb-2">Seated Forward Bend: Sit and reach for your toes gently.</li>
         <li className="text-lg font-medium mb-2">Side Stretches: Stand or sit and lean sideways to stretch your torso.</li>
