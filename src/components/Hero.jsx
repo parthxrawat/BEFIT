@@ -3,6 +3,7 @@ import Button from './Button';
 import workoutimg1 from '../assets/Tadasana2.webp'
 import workoutimg2 from '../assets/tree-pose.webp'
 import workoutimg3 from '../assets/warrior.webp'
+import logo from '../assets/logo.jpg'
 export default function Hero() {
   const [age, setAge] = useState('');
   const [weight, setWeight] = useState('');
@@ -28,7 +29,7 @@ export default function Hero() {
       <div className="w-full bg-white py-1 px-10 flex items-center justify-between">
         <div className="flex items-center">
           <img
-            src="./src/assets/logo.jpg" // Replace with your logo URL
+            src={logo}
             alt="Logo"
             className="h-20 w-24 rounded-full"
           />
