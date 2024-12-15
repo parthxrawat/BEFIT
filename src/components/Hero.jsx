@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Button from './Button';
-
+import workoutimg1 from '../assets/Tadasana2.webp'
+import workoutimg2 from '../assets/tree-pose.webp'
+import workoutimg3 from '../assets/warrior.webp'
 export default function Hero() {
   const [age, setAge] = useState('');
   const [weight, setWeight] = useState('');
@@ -23,16 +25,16 @@ export default function Hero() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-900 via-black to-blue-950 text-white">
       {/* White Header Section */}
-      <div className="w-full bg-white py-4  px-10 flex items-center justify-between">
+      <div className="w-full bg-white py-1 px-10 flex items-center justify-between">
         <div className="flex items-center">
           <img
             src="./src/assets/logo.jpg" // Replace with your logo URL
             alt="Logo"
             className="h-20 w-24 rounded-full"
           />
-          <h1 className="text-4xl font-bold text-blue-900 ml-4 ">BEFIT</h1>
+          <h1 className="text-3xl font-bold text-blue-900 ml-4 ">BEFIT</h1>
         </div>
-        <p className="text-3xl font-medium text-gray-600 tracking-wide">
+        <p className="text-2xl font-medium text-gray-600 tracking-wide">
           Your Fitness. Your Health. Your Journey.
         </p>
       </div>
@@ -207,7 +209,7 @@ export default function Hero() {
       <div className="flex flex-col gap-6 items-center pt-10">
         <div className=" bg-blue-800  text-white rounded-lg shadow-lg h-[420px] overflow-hidden w-full max-w-[1150px] flex">
           <img
-            src="./src/assets/Tadasana2.webp"
+            src={workoutimg1}
             alt="Mountain Pose"
             className="h-[375px] w-[334px] p-4 mt-2 ml-5 object-cover"
           />
@@ -230,7 +232,7 @@ export default function Hero() {
 
         <div className=" bg-blue-800 mt-8  text-white rounded-lg shadow-lg h-[420px] overflow-hidden w-full max-w-[1150px] flex">
           <img
-            src="./src/assets/tree-pose.webp"
+            src={workoutimg2}
             alt="Tree Pose"
             className="h-[375px] w-[334px] p-4 mt-2 ml-5 object-cover"
           />
@@ -254,7 +256,7 @@ export default function Hero() {
 
         <div className="mt-8 bg-blue-800 text-white rounded-lg shadow-lg h-[400px] overflow-hidden w-full max-w-[1150px] flex">
         <img  
-            src="./src/assets/warrior.webp"
+            src={workoutimg3}
             alt="Supported Warrior"
             className="h-[375px] w-[334px] p-4 mt-2 ml-5 object-cover"
           />
