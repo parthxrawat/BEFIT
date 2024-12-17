@@ -4,6 +4,7 @@ import workoutimg1 from '../assets/Tadasana2.webp'
 import workoutimg2 from '../assets/tree-pose.webp'
 import workoutimg3 from '../assets/warrior.webp'
 import logo from '../assets/logo.jpg'
+import hero from '../assets/hero.png'
 export default function Hero() {
   const [age, setAge] = useState('');
   const [weight, setWeight] = useState('');
@@ -13,9 +14,14 @@ export default function Hero() {
 
   const calculateBMI = () => {
     if (weight && height) {
-      const bmiValue = (weight / (height * height)).toFixed(1);
+      // Convert height from centimeters to meters
+      const heightInMeters = height / 100;
+  
+      // Calculate BMI
+      const bmiValue = Math.round(weight / (heightInMeters * heightInMeters));
       setBMI(bmiValue);
-
+  
+      // Determine BMI category
       if (bmiValue < 18.5) setCategory('UNDERWEIGHT');
       else if (bmiValue < 24.9) setCategory('NORMAL WEIGHT');
       else if (bmiValue < 29.9) setCategory('OVERWEIGHT');
@@ -66,7 +72,7 @@ export default function Hero() {
           <div className="w-full md:w-1/2">
             <div className="h-full w-full relative">
               <img
-                src="https://img.freepik.com/premium-photo/dynamic-muscle-man-with-blue-neon-splash_155027-8948.jpg?w=1380"
+                src={hero}
                 alt="Beast Mode"
                 className="h-full w-full object-cover pr-4"
               />
@@ -122,7 +128,7 @@ export default function Hero() {
           type="number"
           value={height}
           onChange={(e) => setHeight(e.target.value)}
-          placeholder="Your Height in Meter"
+          placeholder="Your Height in Centimeter"
           className="w-full p-3 rounded bg-blue-900 text-white placeholder-gray-400"
         />
       </div>
@@ -341,6 +347,51 @@ export default function Hero() {
       </ul>
     </div>
     </div>
+    <footer className="bg-gray-100 py-10 border-t border-gray-200">
+    <div className="container mx-auto flex flex-col md:flex-row justify-between px-6">
+  {/* Logo and Slogan Section */}
+  <div className="flex items-center space-x-4"> 
+    <img
+      src={logo}
+      alt="Logo"
+      className="h-20 w-24 rounded-full m-2"
+    />
+    <div>
+      <h3 className="text-blue-900 text-2xl font-bold mb-1">BEFIT</h3>
+      <p className="text-gray-500 text-sm">
+        Your Fitness. Your Health. Your Journey.
+      </p>
+    </div>
+  </div>
+
+        {/* About Us */}
+        <div className="mb-6 md:mb-0">
+          <h4 className="text-gray-800 font-semibold mb-2">About Us</h4>
+          <ul className="text-gray-600 space-y-1 text-sm">
+            <li>Terms Of Use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        {/* Support */}
+        <div className="mb-6 md:mb-0">
+          <h4 className="text-gray-800 font-semibold mb-2">Support</h4>
+          <ul className="text-gray-600 space-y-1 text-sm">
+            <li>Help Center</li>
+            <li>Feedback</li>
+          </ul>
+        </div>
+
+        {/* Contact Us */}
+        <div>
+          <h4 className="text-gray-800 font-semibold mb-2">Contact Us</h4>
+          <ul className="text-gray-600 space-y-1 text-sm">
+            <li>8448064779</li>
+            <li>support.befit@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     </div>
   );
